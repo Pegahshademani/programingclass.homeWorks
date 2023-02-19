@@ -1,0 +1,20 @@
+<div class="baseGrid">
+
+    <form  action="/messages" method="get">
+        <div class="formGrid flex.container">
+        <label for="author" class="label">Your Name:</label>
+        </div>
+        <div class="formGrid2 flex.container2">
+        <input
+                type="text"
+                id="author"
+                name="author"
+                class="loginInput"
+                autocomplete="off"
+                oninvalid="this.setCustomValidity('Please enter an username to continue..')" required >
+        </div>
+        <div class="formGrid2 flex.container3">
+        <button class="loginButton" type="submit">Join</button>
+        </div>
+    </form>
+</div>

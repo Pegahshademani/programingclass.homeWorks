@@ -1,0 +1,24 @@
+<div class="baseGrid">
+    <div class="mainFrame">
+        <h1>Messages</h1>
+        <ul>
+            {{#each messages}}
+                {{#if isMe}}
+                    <li class="mine"> <em class="author">{{author}}</em>, <em class="date">{{date}}</em><br> {{text}}</li>
+                {{else}}
+                    <li class="others"> <em class="author">{{author}}</em>, <em class="date">{{date}}</em><br> {{text}}</li>
+                {{/if}}
+            {{/each}}
+        </ul>
+        <form id="newMessage" method="post" action="/messages?author={{author}}">
+        <label for="message">Entering here:</label>
+          <textarea
+                name="text"
+                id="text"
+                placeholder="Enter your message here...">
+          </textarea>
+        <input type="hidden" value="{{author}}" name="author">
+        <button type="submit">Send</button>
+        </form>
+    </div>
+</div>
